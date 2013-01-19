@@ -938,12 +938,13 @@ class Services_Soundcloud
         if ($this->_validResponseCode($this->_lastHttpResponseCode)) {
             return $this->_lastHttpResponseBody;
         } else {
-            throw new Services_Soundcloud_Invalid_Http_Response_Code_Exception(
+			throw new Exception('Services_Soundcloud_Invalid_Http_Response_Code_Exception - '. $this->_lastHttpResponseBody. ' - '. $this->_lastHttpResponseCode);
+            /*throw new Services_Soundcloud_Invalid_Http_Response_Code_Exception(
                 null,
                 0,
                 $this->_lastHttpResponseBody,
                 $this->_lastHttpResponseCode
-            );
+            );*/
         }
     }
 
