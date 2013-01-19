@@ -4,7 +4,6 @@
     "version":"1.0.0",
     "type":"library",
     "keywords":["soundcloud", "api", "tracks", "users", "playlists"],
-    "license":"Copyright (c) 2011 Anton Lindqvist, Permission granted, free of charge ...",
     "authors":[
         {
             "name":"Anton Lindqvist",
