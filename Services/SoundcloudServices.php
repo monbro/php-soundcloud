@@ -1,6 +1,8 @@
 <?php
-require_once 'Soundcloud/Exception.php';
-require_once 'Soundcloud/Version.php';
+namespace SoundcloudPHP;
+
+#require_once 'Soundcloud/Exception.php';
+#require_once 'Soundcloud/Version.php';
 
 /**
  * SoundCloud API wrapper with support for authentication using OAuth 2
@@ -12,7 +14,7 @@ require_once 'Soundcloud/Version.php';
  * @license   http://www.opensource.org/licenses/mit-license.php MIT
  * @link      http://github.com/mptre/php-soundcloud
  */
-class Services_Soundcloud
+class SoundcloudServices
 {
 
     /**
@@ -221,7 +223,7 @@ class Services_Soundcloud
     function __construct($clientId, $clientSecret, $redirectUri = null, $development = false)
     {
         if (empty($clientId)) {
-            throw new Services_Soundcloud_Missing_Client_Id_Exception();
+            throw new ServicesSoundcloudMissingClientIdException();
         }
 
         $this->_clientId = $clientId;
@@ -396,7 +398,7 @@ class Services_Soundcloud
         if (array_key_exists($extension, self::$_audioMimeTypes)) {
             return self::$_audioMimeTypes[$extension];
         } else {
-            throw new Services_Soundcloud_Unsupported_Audio_Format_Exception();
+            throw new ServicesSoundcloudUnsupportedAudioFormatException();
         }
     }
 
@@ -559,7 +561,7 @@ class Services_Soundcloud
         if (array_key_exists($format, self::$_responseFormats)) {
             $this->_responseFormat = self::$_responseFormats[$format];
         } else {
-            throw new Services_Soundcloud_Unsupported_Response_Format_Exception();
+            throw new ServicesSoundcloudUnsupportedResponseFormatException();
         }
 
         return $this;
@@ -835,7 +837,7 @@ class Services_Soundcloud
      */
     protected function _getUserAgent()
     {
-        return self::$_userAgent . '/' . new Services_Soundcloud_Version;
+        return self::$_userAgent . '/' . new ServicesSoundcloudVersion;
     }
 
     /**
@@ -938,13 +940,12 @@ class Services_Soundcloud
         if ($this->_validResponseCode($this->_lastHttpResponseCode)) {
             return $this->_lastHttpResponseBody;
         } else {
-			throw new Exception('Services_Soundcloud_Invalid_Http_Response_Code_Exception - '. $this->_lastHttpResponseBody. ' - '. $this->_lastHttpResponseCode);
-            /*throw new Services_Soundcloud_Invalid_Http_Response_Code_Exception(
+            throw new ServicesSoundcloudInvalidHttpResponseCodeException(
                 null,
                 0,
                 $this->_lastHttpResponseBody,
                 $this->_lastHttpResponseCode
-            );*/
+            );
         }
     }
 

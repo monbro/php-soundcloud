@@ -1,4 +1,6 @@
 <?php
+namespace SoundcloudPHP;
+
 /**
  * Soundcloud package version
  *
@@ -9,7 +11,7 @@
  * @license   http://www.opensource.org/licenses/mit-license.php MIT
  * @link      http://github.com/mptre/php-soundcloud
  */
-class Services_Soundcloud_Version
+class ServicesSoundcloudVersion
 {
 
     const MAJOR = 2;
