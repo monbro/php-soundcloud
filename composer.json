@@ -1,26 +1,21 @@
 {
-    "name":"monbro/php-soundcloud",
-    "description":"A wrapper for the SoundCloud API written in PHP with support for authentication using OAuth 2.0. The wrapper got a real overhaul with version 2.0. The current version was written with PEAR in mind and can easily by distributed as a PEAR package.",
-    "version":"1.0.0",
-    "type":"library",
-    "keywords":["soundcloud", "api", "tracks", "users", "playlists"],
-    "authors":[
+    "name": "monbro/php-soundclouds",
+    "type": "library",
+    "description": "Test extensions",
+    "keywords": [
+        "test"
+    ],
+    "homepage": "http://test.org/",
+    "authors": [
         {
-            "name":"Anton Lindqvist",
-            "email":"anton@qvister.se",
-            "role":"developer"
+            "name": "Test",
+            "email": "Test@test.de"
         }
     ],
-
-    "minimum-stability":"dev",
-
-    "require":{
-        "php":">=5.0.0"
+    "require": {
+        "php": ">=5.0.0",
     },
-
-    "autoload":{
-        "psr-0":{
-            "SoundcloudPHP": "Services/"
-        }
+    "autoload": {
+        "psr-0": { "SoundcloudService": "Services/" }
     }
 }
