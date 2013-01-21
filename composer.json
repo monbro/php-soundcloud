@@ -1,18 +1,16 @@
 {
-    "name": "monbro/testcase-package",
+    "name": "monbro/php-soundcloud",
     "type": "library",
-    "description": "Test",
+    "description": "php-soundcloud lib prepared to use with composer",
     "version": "1.0.0",
-    "keywords": ["html"],
-    "homepage": "https://github.com/monbro/testcase-package",
-    "license": "MIT",
+    "keywords": ["html","soundcloud","api","OAuth"],
+    "homepage": "https://github.com/monbro/php-soundcloud",
     "authors": [
         {            
-            "homepage": "https://github.com/monbro/testcase-package"
+            "homepage": "https://github.com/monbro/php-soundcloud"
         },
         {
-            "name": "Test",
-            "email": "test@test.de"
+            "name": "Anton Lindqvist"
         }   
     ],
     "require": {

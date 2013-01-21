@@ -14,6 +14,31 @@ The wrapper got a real overhaul with version 2.0. The current version was writte
 
 Check out the [getting started](https://github.com/mptre/php-soundcloud/wiki/OAuth-2) wiki entry for further reference on how to get started. Also make sure to check out the [demo application](https://github.com/mptre/ci-soundcloud) for some example code.
 
+## Getting started with Composer
+
+Include it by adding it to your composer.json, dont forget to do "composer.phar update"
+
+```
+"monbro/php-soundcloud": "dev-master",
+```
+
+Use it in your php class like
+
+```
+use Monbro\Soundcloud\SoundcloudServices;
+use Monbro\Soundcloud\ServicesSoundcloudInvalidHttpResponseCodeException;
+```
+
+Catch Exceptions like
+
+```
+try {
+    $client = new SoundcloudServices('key','key','http://domain.de');
+    $tracks = $client->get('tracks', array('q' => $term, 'order' => 'hotness', 'filter' => 'public', 'limit' => 20));
+} catch (ServicesSoundcloudInvalidHttpResponseCodeException $e) {
+    $this->log = 'Exception abgefangen: '.  $e->getMessage(). "<br>";
+}
+```
 
 ## Examples
 
