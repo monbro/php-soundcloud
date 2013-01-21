@@ -1,21 +1,24 @@
 {
-    "name": "monbro/php-soundcloud",
+    "name": "monbro/testcase-package",
     "type": "library",
-    "description": "Test extensions",
-    "keywords": [
-        "test"
-    ],
-    "homepage": "http://test.org/",
+    "description": "Test",
+    "version": "1.0.0",
+    "keywords": ["html"],
+    "homepage": "https://github.com/monbro/testcase-package",
+    "license": "MIT",
     "authors": [
+        {            
+            "homepage": "https://github.com/monbro/testcase-package"
+        },
         {
             "name": "Test",
-            "email": "Test@test.de"
-        }
+            "email": "test@test.de"
+        }   
     ],
     "require": {
-        "php": ">=5.0.0"
+        "php": ">=5.0.0"        
     },
     "autoload": {
-        "psr-0": { "SoundcloudService": "Services/" }
-    }
+        "psr-0": { "Monbro\\Soundcloud": "Src/" }
+    }    
 }
